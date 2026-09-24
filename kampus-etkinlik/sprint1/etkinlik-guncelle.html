@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Etkinlik Güncelle</title>
+</head>
+<body>
+    <header>
+        <h1>Etkinlik Güncelle</h1>
+        <nav>
+            <a href="index.html">Ana Sayfa</a> | 
+            <a href="etkinlik-ekle.html">Ekle</a> | 
+            <a href="etkinlik-guncelle.html">Güncelle</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="#" method="POST">
+            <div>
+                <label for="etkinlik-adi">Etkinlik Adı</label><br>
+                <input type="text" id="etkinlik-adi" name="etkinlik_adi" value="Kariyer Günleri" required>
+            </div>
+
+            <div>
+                <label for="kategori">Kategori</label><br>
+                <select id="kategori" name="kategori" required>
+                    <option value="seminer" selected>Seminer</option>
+                    <option value="atolye">Atölye</option>
+                    <option value="konferans">Konferans</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="tarih">Tarih</label><br>
+                <input type="text" id="tarih" name="tarih" value="12.10.2026" required>
+            </div>
+
+            <div>
+                <label for="aciklama">Açıklama</label><br>
+                <textarea id="aciklama" name="aciklama" rows="4" required>Mezun söyleşileri</textarea>
+            </div>
+
+            <div>
+                <button type="submit">Güncelle</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
