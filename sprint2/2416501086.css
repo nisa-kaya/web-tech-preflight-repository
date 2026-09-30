@@ -1,0 +1,239 @@
+/* Ad Soyad 20231047 */
+:root {
+  --no: 2416501086;
+  --ton: mod(var(--no), 360);
+  --renk-ana: hsl(var(--ton) 65% 38%);
+  --renk-zemin: hsl(var(--ton) 30% 97%);
+  --font: "Courier New", serif;
+  --bosluk-m: 1rem;
+  --kose: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--renk-zemin);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+header {
+  background-color: var(--renk-ana);
+  color: #fff;
+  padding: var(--bosluk-m);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: var(--bosluk-m);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Grid Yapısı - Telefonda Tek Sütun, Geniş Ekranda Çoklu Sütun */
+.kart-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--bosluk-m);
+}
+
+@media (min-width: 600px) {
+  .kart-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .kart-grid.uc-sutun {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+article {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: var(--kose);
+  padding: var(--bosluk-m);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+article h3 {
+  margin-top: 0;
+  color: var(--renk-ana);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--renk-ana);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--kose);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Detay Sayfası Düzeni */
+.detay-icerik {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .detay-icerik {
+    flex-direction: row;
+  }
+}
+
+.detay-icerik img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--kose);
+}
+
+/* Form Düzenleri */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  padding: var(--bosluk-m);
+  border-radius: var(--kose);
+  border: 1px solid #ddd;
+}
+
+.form-grup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-grup label {
+  font-weight: bold;
+}
+
+.form-grup input,
+.form-grup select,
+.form-grup textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+/* Hatalı alanlar için kırmızı sınır */
+input:invalid, select:invalid, textarea:invalid {
+  border-color: #d9534f;
+}
+
+/* Bağlantıların altındaki çizgiyi kaldırır ve başlık rengini verir */
+a {
+  color: var(--renk-ana);
+  text-decoration: none;
+}
+
+/* Fareyle üzerine gelindiğinde (hover) hafif solması veya altının çizilmesi için (isteğe bağlı) */
+a:hover {
+  opacity: 0.8;
+  text-decoration: underline; 
+}
+
+/* Detay sayfası genel kapsayıcısı (Mobilde alt alta, masatüstünde yan yana) */
+.detay-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.detay-sol {
+  flex: 1;
+}
+
+.detay-sol img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--kose);
+  display: block;
+}
+
+.afis-yazi {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.detay-sag {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Sadece künye bilgilerini içeren beyaz kutu (border, arka plan ve köşe yuvarlama) */
+.kunye-kutusu {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.75rem 1.5rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: var(--kose);
+  border: 1px solid #ddd;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.kunye-kutusu dt {
+  font-weight: bold;
+}
+
+.kunye-kutusu dd {
+  margin: 0;
+}
+
+/* Açıklama ve Buton Stili (Beyaz kutunun dışında kalır) */
+.etkinlik-aciklama {
+  margin: 0;
+}
+
+/* Geniş ekranlarda (Masaüstü) afiş ile sağ tarafı yan yana hizala */
+@media (min-width: 768px) {
+  .detay-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
