@@ -21,10 +21,9 @@ if (container) {
     `;
   } 
   
-  else {
+ else {
     document.title = event.title;
 
-   
     const formatliTarih = new Date(event.date).toLocaleDateString("tr-TR", {
       day: "numeric",
       month: "long",
@@ -40,7 +39,6 @@ if (container) {
           <h2>${event.title}</h2>
           <p class="etkinlik-aciklama">${event.description}</p>
           
-          <!-- Künye bilgileri dl / dt / dd formatında -->
           <dl class="kunye-kutusu">
             <dt>Tarih</dt>
             <dd>${formatliTarih}</dd>
@@ -49,14 +47,12 @@ if (container) {
             <dt>Kategori</dt>
             <dd>${event.category}</dd>
           </dl>
-<dt>Kontenjan</dt>
-<dd>${event.capacity} kişi</dd>
-          <a href="etkinlikler.html" class="btn">Listeye dön</a>
-          <a href="etkinlik-guncelle.html?id=${event.id}" class="btn">
-    Bu etkinliği güncelle
-</a>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+            <a href="etkinlikler.html" class="btn">Listeye dön</a>
+            <a href="etkinlik-guncelle.html?id=${event.id}" class="btn">Bu etkinliği güncelle</a>
+          </div>
         </div>
       </div>
-    `
-  }
-}
+    `;
+  }}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etkinlik Güncelle</title>
     <link rel="stylesheet" href="2416501086.css">
-    <script type="module" src="js/event-form.js"></script>
+    <script type="module" src="js/event-update.js"></script>
 </head>
 <body>
     <header>
@@ -14,39 +14,42 @@
         <a href="index.html">Ana Sayfa</a>
         <a href="etkinlikler.html">Etkinlikler</a>
         <a href="etkinlik-ekle.html">Ekle</a>
-      
       </nav>
     </header>
 
-    <main>
-        <h2>Etkinlik Güncelle</h2>
-        
-        <form>
+    <main id="guncelle-main">
+        <!-- Form başlangıçta JavaScript ile kontrol edilecek -->
+        <form id="etkinlik-formu" style="display: none;">
+            <p>Alanlar mevcut etkinliğin bilgileriyle dolu gelir. Bu sprintte form veri güncellemez.</p>
+            
             <div class="form-grup">
-                <label for="ad">Etkinlik adı</label>
-                <input type="text" id="ad" value="Kariyer Günleri 2026" required>
+                <label for="ad">Etkinlik Adı *</label>
+                <input type="text" id="ad" name="ad">
             </div>
             
             <div class="form-grup">
-                <label for="kategori">Kategori</label>
-                <select id="kategori" required>
-                    <option value="seminer" selected>Seminer</option>
-                    <option value="atolye">Atölye</option>
-                    <option value="soylesi">Söyleşi</option>
+                <label for="kategori">Kategori *</label>
+                <select id="kategori" name="kategori">
+                    <option value="Atölye">Atölye</option>
+                    <option value="Seminer">Seminer</option>
+                    <option value="Söyleşi">Söyleşi</option>
                 </select>
             </div>
             
             <div class="form-grup">
-                <label for="tarih">Tarih</label>
-                <input type="date" id="tarih" value="2026-10-12" required>
+                <label for="tarih">Tarih *</label>
+                <input type="date" id="tarih" name="tarih">
             </div>
-            
+
             <div class="form-grup">
-                <label for="aciklama">Açıklama</label>
-                <textarea id="aciklama" rows="4">Mezun söyleşileri</textarea>
+                <label for="yer">Yer *</label>
+                <input type="text" id="yer" name="yer">
             </div>
-            
-            <button type="submit" class="btn">Güncelle</button>
+
+            <div class="form-grup">
+                <label for="kontenjan">Kontenjan</label>
+                <input type="number" id="kontenjan" name="kontenjan">
+            </div>
         </form>
     </main>
 </body>
