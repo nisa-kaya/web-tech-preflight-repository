@@ -11,8 +11,12 @@
   },
   "dependencies": {
     "react": "^19.2.8",
+<<<<<<< HEAD
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.5"
+=======
+    "react-dom": "^19.2.8"
+>>>>>>> 5cc2ab86f04fc691be84451c896bca6e1b1d57d8
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
