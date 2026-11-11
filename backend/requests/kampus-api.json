@@ -8,7 +8,7 @@
   },
   "item": [
     {
-      "name": "GET /health",
+      "name": "GET 1 Health",
       "request": {
         "method": "GET",
         "header": [],
@@ -27,7 +27,7 @@
       "response": []
     },
     {
-      "name": "GET /events",
+      "name": "GET 2 Etkinlik listesi",
       "request": {
         "method": "GET",
         "header": [],
@@ -46,7 +46,7 @@
       "response": []
     },
     {
-      "name": "GET /events/event-2",
+      "name": "GET 3 Tek etkinlik",
       "request": {
         "method": "GET",
         "header": [],
@@ -66,7 +66,7 @@
       "response": []
     },
     {
-      "name": "GET /events/yok",
+      "name": "GET 4 Olmayan etkinlik (404)",
       "request": {
         "method": "GET",
         "header": [],
@@ -86,7 +86,7 @@
       "response": []
     },
     {
-      "name": "POST /events",
+      "name": "POST 5 Etkinlik oluştur (201)",
       "request": {
         "method": "POST",
         "header": [],
@@ -114,7 +114,7 @@
       "response": []
     },
     {
-      "name": "POST /events (validation error)",
+      "name": "POST 6 Eksik veri (400)",
       "request": {
         "method": "POST",
         "header": [],
