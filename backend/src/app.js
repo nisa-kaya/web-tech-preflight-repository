@@ -4,11 +4,17 @@ import eventRoutes from "./routes/event-routes.js";
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // body -> req.body
-
+app.use(express.json()); 
+app.get("/health", (req, res) => {
+  res.json({
+    status: "ok",
+    time: new Date().toISOString(),
+    student: "2416501086", 
+  });
+});
 app.use("/events", eventRoutes);
 
-app.use((req, res) => { // eşleşme yoksa
+app.use((req, res) => { 
   res.status(404).json({ error: { message: "Route not found" } });
 });
 
