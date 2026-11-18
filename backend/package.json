@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
- "scripts": {
+  "scripts": {
     "dev": "node --watch src/server.js",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "seed": "node src/data/seed.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^18.0.10",
-    "express": "^5.3.0"
+    "express": "^5.3.0",
+    "mongoose": "^9.12.2"
   }
 }

@@ -1,8 +1,7 @@
-export const events = [
+export const seedEvents = [
   {
-    id: "event-1",
     title: "Yapay Zeka ve Gelecek Zirvesi",
-    category: "Teknoloji",
+    category: "Seminer",
     capacity: 150,
     date: "2026-06-15",
     time: "10:00",
@@ -10,9 +9,8 @@ export const events = [
     description: "Yapay zekanın iş dünyasına etkileri ve gelecekteki trendler konuşulacak.",
   },
   {
-    id: "event-2",
     title: "Web Geliştirme Bootcamp",
-    category: "Eğitim",
+    category: "Atölye",
     capacity: 80,
     date: "2026-06-18",
     time: "14:00",
@@ -20,9 +18,8 @@ export const events = [
     description: "Sıfırdan ileri seviyeye modern web teknolojileri atölyesi.",
   },
   {
-    id: "event-3",
     title: "Bahar Şenliği Konseri",
-    category: "Eğlence",
+    category: "Seminer", // veya uygun başka bir kategori
     capacity: 500,
     date: "2026-06-25",
     time: "19:30",
@@ -30,9 +27,8 @@ export const events = [
     description: "Yılın en büyük müzik festivali ve canlı konser etkinlikleri.",
   },
   {
-    id: "event-4",
     title: "Girişimcilik ve Start-up Buluşması",
-    category: "Kariyer",
+    category: "Seminer",
     capacity: 120,
     date: "2026-07-02",
     time: "13:00",
@@ -40,9 +36,8 @@ export const events = [
     description: "Genç girişimciler ile yatırımcıları bir araya getiren networking etkinliği.",
   },
   {
-    id: "event-5",
     title: "Siber Güvenlik Temelleri",
-    category: "Eğitim",
+    category: "Seminer",
     capacity: 90,
     date: "2026-07-10",
     time: "11:00",
@@ -50,9 +45,8 @@ export const events = [
     description: "Güncel siber tehditler ve kişisel dijital güvenlik önlemleri.",
   },
   {
-    id: "event-6",
     title: "Doğa Yürüyüşü ve Kamp",
-    category: "Spor",
+    category: "Atölye",
     capacity: 60,
     date: "2026-07-15",
     time: "08:00",
